@@ -1,0 +1,13 @@
+{% extends "base.html"%}
+{%block content%}
+<h1>Hello Django home page this is me Kausik </h1>
+<ul>
+    {% for post in post_list %}
+    <div class="post_Entry">
+        <h2><a href="{% url 'post_details' post.pk %}">{{post.text}}</a></h2>
+        <p>{{post.body}}</p>
+
+    </div>
+    {%endfor%}
+</ul>
+{%endblock content%}
